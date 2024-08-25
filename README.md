@@ -1,2 +1,3 @@
 # C_Text_Editor
-a cli text editor
+A cli text editor.
+Written in C :)
