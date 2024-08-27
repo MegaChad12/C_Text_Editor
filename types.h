@@ -1,6 +1,8 @@
 #ifndef Types
 #define Types
-#define PathSize 100
+#define BufferSize 256
+#define ReaderBuffer 1024
+#define UwUTime 3
 
 typedef enum CommandTypes{
     UwU,
