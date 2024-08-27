@@ -11,6 +11,7 @@ typedef enum CommandTypes{
     Append,
     Exit,
     Remove,
+    Timer,
     None,
 } CommandTypes;
 
