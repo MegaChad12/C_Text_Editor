@@ -3,3 +3,5 @@
 A cli text editor.
 
 Written in C :)
+
+state : still under development...
