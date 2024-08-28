@@ -4,4 +4,6 @@ A cli text editor.
 
 Written in C :)
 
-state : still under development...
+state : ended.
+
+I am gonna Use Rust.
