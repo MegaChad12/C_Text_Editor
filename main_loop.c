@@ -143,9 +143,9 @@ void write_file(const char* path){
 
 //due to our very low budget and time.
 //I am gonna replace some keys like (space) and (enter [\n]) with _ and %.
-//And you can cancel it by typing it twice.
 
 void append_text(const char* path){
+    printf("\nPlease, Input Text.\nNOTE: to type (enter [\\n]) you must use %c and _ instead of space.",'%');
     FILE * fileptr = fopen(path,"a");
     
     if (fileptr == NULL){
@@ -186,6 +186,7 @@ void delete_file(const char* path){
 
 // I don't know why I added This.
 void counter(){
+    printf("\nInput Duration.\n");
     double current;
     
     float timer;
@@ -203,12 +204,14 @@ void counter(){
 void main_loop(){
     while (1){
     	CommandTypes command = get_command();
-    	printf("\nFile Path.\n");
-    	char path[BufferSize];
+        char path[BufferSize];
+    	if (command == Read | command == Write | command == Append | command == Remove | command == Exit){
+        printf("\nFile Path.\n");
     	scanf("%s",&path);
     	DebugInfo(path,command);
-    	chooseCommand(command,path);
-    	if (command == Exit){
+    	}
+        chooseCommand(command,path);
+        if (command == Exit){
     	    break;
     	}
     	else if (command == None){
